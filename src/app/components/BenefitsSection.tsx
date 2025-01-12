@@ -6,7 +6,9 @@ export default function BenefitsSection() {
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800">Why Choose us ?</h2>
+          <h2 className="text-3xl font-bold text-gray-800">
+            Porquê escolher a FoxPay?
+          </h2>
           <p className="text-lg text-gray-600 mt-2">
             Discover the key benefits of working with us.
           </p>
@@ -36,10 +38,10 @@ export default function BenefitsSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-800">
-                Minimize Processing Fees
+                Split de pagamentos
               </h3>
               <p className="text-gray-600 mt-1">
-                Save thousands annually with our tax-optimized solutions.
+                Divida seus recebimentos com organização e segurança
               </p>
             </div>
           </div>
@@ -66,10 +68,10 @@ export default function BenefitsSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-800">
-                Reliable Payment Solutions
+                Atendimento Humanizado
               </h3>
               <p className="text-gray-600 mt-1">
-                Enjoy secure and seamless credit card processing.
+                Tenha um relacionamento próximo com o seu especialista FoxPay.
               </p>
             </div>
           </div>
@@ -96,15 +98,15 @@ export default function BenefitsSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-800">
-                Boost Profit Margins
+                Aceite as principais bandeiras
               </h3>
               <p className="text-gray-600 mt-1">
-                Increase your revenue with lower overhead costs.
+                Trabalhamos com as principais bandeiras do mercado.
               </p>
             </div>
           </div>
 
-          {/* Benefit Item 4 */}
+          {/* Benefit Item 5 */}
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
               <div className="bg-orange-500 text-white rounded-full p-3">
@@ -126,10 +128,68 @@ export default function BenefitsSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-800">
-                Dedicated Support
+                Evite a bitributação.
               </h3>
               <p className="text-gray-600 mt-1">
-                Get 24/7 assistance from our expert team.
+                Declare da forma correta e evite a cobrança duplicada.
+              </p>
+            </div>
+          </div>
+
+          {/* Benefit Item 6 */}
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0">
+              <div className="bg-orange-500 text-white rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13 16h-1v-4h-1m2-4h.01M12 3c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 18.5 2 13 6.5 3 12 3z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800">Item 6</h3>
+              <p className="text-gray-600 mt-1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptatem quo, dolorem incidunt quae, ipsa sapiente dolore
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0">
+              <div className="bg-orange-500 text-white rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13 16h-1v-4h-1m2-4h.01M12 3c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 18.5 2 13 6.5 3 12 3z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Receba pagamentos à vista.
+              </h3>
+              <p className="text-gray-600 mt-1">
+                Recebimentos antecipados, agilidade.
               </p>
             </div>
           </div>
