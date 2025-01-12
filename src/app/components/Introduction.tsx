@@ -7,7 +7,7 @@ export default function Introduction() {
     <section className="relative h-screen">
       {/* Background Video */}
       <video
-        className="opacity-10  absolute inset-0 w-full h-full object-cover"
+        className="opacity-10  absolute inset-0 w-full h-full object-cover "
         autoPlay
         muted
         loop
@@ -18,7 +18,7 @@ export default function Introduction() {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black"></div>
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
