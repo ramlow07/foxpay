@@ -13,6 +13,8 @@ export default function Menu() {
           <Button
             variant="outlined"
             color="primary"
+            component="a"
+            href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
             sx={{
               borderColor: "orange",
               color: "orange",
@@ -33,6 +35,8 @@ export default function Menu() {
           <Button
             variant="outlined"
             color="primary"
+            component="a"
+            href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
             sx={{
               borderColor: "orange",
               color: "orange",
