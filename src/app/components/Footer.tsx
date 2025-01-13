@@ -8,47 +8,54 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-black py-8">
+    <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Footer Top */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* About Us */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About FoxPay</h3>
-            <p className="text-black">
-              FoxPay is your trusted partner for smart and efficient payment
-              solutions. Boost your business and save on unnecessary fees.
+            <h3 className="text-lg font-semibold mb-4">Sobre a FoxPay</h3>
+            <p className="text-white">
+              A FoxPay é sua parceira confiável para soluções de pagamento
+              inteligentes e eficientes. Impulsione seu negócio e economize com
+              taxas desnecessárias.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul>
               <li className="mb-2">
-                <a href="#about" className="hover:text-white transition-colors">
-                  About Us
+                <a
+                  href="#about"
+                  className="hover:text-orange-500 transition-colors"
+                >
+                  Sobre Nós
                 </a>
               </li>
               <li className="mb-2">
                 <a
                   href="#services"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-orange-500 transition-colors"
                 >
-                  Our Services
+                  Nossos Serviços
                 </a>
               </li>
               <li className="mb-2">
                 <a
                   href="#contact"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-orange-500 transition-colors"
                 >
-                  Contact Us
+                  Fale Conosco
                 </a>
               </li>
               <li>
-                <a href="#help" className="hover:text-white transition-colors">
-                  Help Center
+                <a
+                  href="#help"
+                  className="hover:text-orange-500 transition-colors"
+                >
+                  Central de Ajuda
                 </a>
               </li>
             </ul>
@@ -56,23 +63,23 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul>
-              <li className="mb-2">Email: support@foxpay.com</li>
-              <li className="mb-2">Phone: +1 (555) 123-4567</li>
-              <li>Address: 123 FoxPay Street, Tech City</li>
+              <li className="mb-2">Email: suporte@foxpay.com</li>
+              <li className="mb-2">Telefone: +1 (555) 123-4567</li>
+              <li>Endereço: Rua FoxPay, 123, Tech City</li>
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Siga-nos</h3>
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
               >
                 <FaFacebookF className="w-6 h-6" />
               </a>
@@ -80,7 +87,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
               >
                 <FaInstagram className="w-6 h-6" />
               </a>
@@ -88,7 +95,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
               >
                 <FaTwitter className="w-6 h-6" />
               </a>
@@ -96,7 +103,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
               >
                 <FaLinkedin className="w-6 h-6" />
               </a>
@@ -107,7 +114,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-4 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} FoxPay. All rights reserved.
+            © {new Date().getFullYear()} FoxPay. Todos os direitos reservados.
           </p>
         </div>
       </div>
