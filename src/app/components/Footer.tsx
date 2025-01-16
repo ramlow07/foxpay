@@ -8,14 +8,14 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-white text-black py-8">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Footer Top */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* About Us */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Sobre a FoxPay</h3>
-            <p className="text-white">
+            <p className="text-black">
               A FoxPay é sua parceira confiável para soluções de pagamento
               inteligentes e eficientes. Impulsione seu negócio e economize com
               taxas desnecessárias.
