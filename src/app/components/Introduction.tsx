@@ -1,5 +1,5 @@
 // components/Introduction.tsx
-import logo from "@/app/ui/images/logo.png";
+
 import Button from "@mui/material/Button";
 
 export default function Introduction() {
