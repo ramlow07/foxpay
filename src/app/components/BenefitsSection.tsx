@@ -15,7 +15,7 @@ export default function BenefitsSection() {
             Porquê escolher a FoxPay?
           </h2>
           <p className="text-lg text-black mt-2">
-            Discover the key benefits of working with us.
+            Descubra os benefícios de trabalhar conosco.
           </p>
         </div>
 
