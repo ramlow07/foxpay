@@ -8,8 +8,6 @@ import { EmblaOptionsType } from "embla-carousel";
 import FeedbackCarousel from "./components/FeedbackCarousel";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const imageSlides = ["/feedback1.PNG", "/feedback2.PNG", "/feedback3.PNG"];
 
