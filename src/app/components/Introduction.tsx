@@ -18,21 +18,22 @@ export default function Introduction() {
       </video>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black"></div>
+      <div className="absolute inset-0"></div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-        <h1 className="text-5xl font-bold mb-4 drop-shadow-md">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-orange-500 text-center px-6">
+        <h1 className="text-7xl font-bold mb-4 drop-shadow-md">
           Seja bem vindo à FoxPay.
         </h1>
-        <p className="text-lg mb-6 drop-shadow-sm">
-          Empoderando seu negócio com sistemas inteligentes de pagamento.
+        <p className="font-extralight tracking-wider text-black text-4xl mb-6 drop-shadow-sm">
+          A <span className="text-orange-500">liberdade</span> da sua empresa
+          começa <span className="text-orange-500">agora.</span>
         </p>
         <Button
           variant="outlined"
           color="primary"
-          component="a" // Makes the button render as an anchor tag
-          href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais." // Replace with your desired link
+          component="a"
+          href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
           sx={{
             borderColor: "orange",
             color: "orange",
