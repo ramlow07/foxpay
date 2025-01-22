@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 
 export default function Menu() {
   return (
-    <header className="flex justify-between items-center p-4 bg-white text-black border-orange-600">
+    <header className="flex justify-between items-center p-4 bg-black text-white border-orange-600">
       {/* Logo */}
       <div className="flex items-center">
         <img src="/logo.png" alt="FoxPay Logo" className="h-16 w-auto" />

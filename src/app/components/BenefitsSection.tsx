@@ -7,14 +7,14 @@ import { SiCashapp } from "react-icons/si";
 
 export default function BenefitsSection() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-black">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-black">
+          <h2 className="text-3xl font-bold text-white">
             Porquê escolher a FoxPay?
           </h2>
-          <p className="text-lg text-black mt-2">
+          <p className="text-lg text-white mt-2">
             Descubra os benefícios de trabalhar conosco.
           </p>
         </div>
@@ -79,15 +79,15 @@ export default function BenefitsSection() {
               className="flex items-start space-x-4 transform transition-transform duration-300 hover:scale-105 border border-transparent hover:border-orange-500 rounded-lg p-4"
             >
               <div className="flex-shrink-0">
-                <div className="bg-orange-500 text-black rounded-full p-3">
+                <div className="bg-orange-500 text-white rounded-full p-3">
                   {benefit.icon}
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-black">
+                <h3 className="text-xl font-semibold text-white">
                   {benefit.title}
                 </h3>
-                <p className="text-black mt-1">{benefit.description}</p>
+                <p className="text-white mt-1">{benefit.description}</p>
               </div>
             </div>
           ))}

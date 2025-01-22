@@ -2,9 +2,9 @@ import Button from "@mui/material/Button";
 
 export default function Hero() {
   return (
-    <section className="relative bg-cover bg-center text-black py-24">
+    <section className="relative bg-cover bg-center text-white py-24">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white "></div>
+      <div className="absolute inset-0 bg-black "></div>
 
       {/* Text Content */}
       <div className="relative z-10 container mx-auto px-6 sm:px-12 flex flex-col justify-center items-center text-center">
