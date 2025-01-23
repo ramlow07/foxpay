@@ -44,9 +44,8 @@ export default function BenefitsSection() {
             },
             {
               icon: <HiOutlineReceiptTax className="w-6 h-6" />,
-              title: "Evite a bitributação.",
-              description:
-                "Declare da forma correta e evite a cobrança duplicada.",
+              title: "Declare de forma correta e evite a tributação duplicada.",
+              description: "Recebimentos em D1 com agilidade.",
             },
             {
               icon: <MdOutlineAccountBalance className="h-6 w-6" />,
