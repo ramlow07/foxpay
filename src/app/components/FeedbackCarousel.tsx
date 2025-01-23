@@ -18,10 +18,7 @@ const FeedbackCarousel: React.FC<PropType> = (props) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((imageSrc, index) => (
-            <div
-              className="embla__slide w-full sm:w-1/2 sm:justify-center"
-              key={index}
-            >
+            <div className="embla__slide" key={index}>
               <img
                 src={imageSrc}
                 alt={`Feedback ${index + 1}`}
