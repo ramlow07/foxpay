@@ -9,7 +9,13 @@ import FeedbackCarousel from "./components/FeedbackCarousel";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
-const imageSlides = ["/feedback1.PNG", "/feedback2.PNG", "/feedback3.PNG"];
+const imageSlides = [
+  "/feedback1.PNG",
+  "/feedback2.PNG",
+  "/feedback3.PNG",
+  "/feedback4.PNG",
+  "/feedback5.PNG",
+];
 
 export default function Home() {
   return (
