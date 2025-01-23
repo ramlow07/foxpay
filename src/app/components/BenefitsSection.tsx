@@ -4,6 +4,7 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { FaPeopleArrows } from "react-icons/fa";
 import { HiOutlineReceiptTax } from "react-icons/hi";
 import { SiCashapp } from "react-icons/si";
+import { MdOutlineAccountBalance } from "react-icons/md";
 
 export default function BenefitsSection() {
   return (
@@ -12,7 +13,7 @@ export default function BenefitsSection() {
         {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-white">
-            Porquê escolher a FoxPay?
+            Porquê escolher a FOXPAY?
           </h2>
           <p className="text-lg text-white mt-2">
             Descubra os benefícios de trabalhar conosco.
@@ -33,7 +34,7 @@ export default function BenefitsSection() {
               icon: <FaPeopleArrows className="w-6 h-6" />,
               title: "Atendimento Humanizado",
               description:
-                "Tenha um relacionamento próximo com o seu especialista FoxPay.",
+                "Tenha um relacionamento próximo com o seu especialista FOXPAY.",
             },
             {
               icon: <CiCreditCard1 className="w-6 h-6" />,
@@ -48,26 +49,12 @@ export default function BenefitsSection() {
                 "Declare da forma correta e evite a cobrança duplicada.",
             },
             {
-              icon: (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13 16h-1v-4h-1m2-4h.01M12 3c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 18.5 2 13 6.5 3 12 3z"
-                  />
-                </svg>
-              ),
-              title: "Item 6",
+              icon: <MdOutlineAccountBalance className="h-6 w-6" />,
+              title: "Conta Digital",
               description:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quo, dolorem incidunt quae, ipsa sapiente dolore.",
+                "Acesso a conta digital para acompanhamento em tempo real de todas as suas vendas. AUTONOMIA TOTAL na palma da sua mão",
             },
+
             {
               icon: <SiCashapp className="w-6 h-6" />,
               title: "Receba pagamentos à vista.",
