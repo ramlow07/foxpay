@@ -21,7 +21,7 @@ export default function Introduction() {
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col h-full text-orange-500 text-center px-6">
-        <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-500 overflow-hidden text-7xl font-extralight mb-4 drop-shadow-md self-center py-5 tracking-wider">
+        <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-500 overflow-hidden text-3xl font-extralight mb-4 drop-shadow-md self-center py-5 tracking-wider">
           Seja bem vindo à
         </h1>
 
