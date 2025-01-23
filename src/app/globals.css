@@ -75,6 +75,14 @@ body {
 }
 
 @media (min-width: 375px) and (max-width: 460px) {
+  .header_menu {
+    height: 100px;
+  }
+
+  .menu_button {
+    height: 60px;
+  }
+
   .embla__viewport {
     display: flex;
     justify-content: center;
