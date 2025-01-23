@@ -2,15 +2,16 @@ import Button from "@mui/material/Button";
 
 export default function Menu() {
   return (
-    <header className="flex justify-between items-center p-4 bg-black text-white border-orange-600">
+    <header className="header_menu flex justify-between items-center p-4 bg-black text-white border-orange-600">
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/logo.png" alt="FoxPay Logo" className="h-16 w-auto" />
+        <img src="/logo.png" alt="FoxPay Logo" className="h-14 w-auto" />
       </div>
       <div className="container flex sm:flex-wrap p-4 justify-center align-center">
         {/* Buttons */}
         <nav className="flex justify-center space-x-4 sm:space-x-2">
           <Button
+            className="menu_button"
             variant="outlined"
             color="primary"
             component="a"
@@ -33,6 +34,7 @@ export default function Menu() {
             Fale conosco
           </Button>
           <Button
+            className="menu_button"
             variant="outlined"
             color="primary"
             component="a"
