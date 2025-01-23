@@ -30,6 +30,7 @@ body {
 }
 .embla__viewport {
   overflow: hidden;
+  display: flex;
   background-color: black;
 }
 .embla__container {
@@ -52,7 +53,7 @@ body {
 
 .embla__slide {
   position: relative;
-  min-width: 100%; /* Ensure one slide takes the full viewport width */
+  min-width: 100%;
   justify-items: center;
   overflow: hidden;
 }
@@ -65,4 +66,19 @@ body {
   align-content: center;
   display: block;
   background-color: #0a0a0a;
+}
+
+@media (min-width: 375px) and (max-width: 460px) {
+  .embla {
+    max-width: 48rem;
+    margin: auto;
+    --slide-height: 19rem;
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+  }
 }
