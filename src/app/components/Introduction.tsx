@@ -6,7 +6,7 @@ export default function Introduction() {
     <section className="relative h-screen">
       {/* Background Video */}
       <video
-        className="opacity-10  absolute inset-0 w-full h-full object-cover "
+        className="opacity-30  absolute inset-0 w-full h-full object-cover "
         autoPlay
         muted
         loop
