@@ -13,7 +13,7 @@ const imageSlides = ["/feedback1.PNG", "/feedback2.PNG", "/feedback3.PNG"];
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 text-gray-900">
+    <main className=" text-gray-900 bg-black">
       <Menu />
       <Introduction />
       <Hero />

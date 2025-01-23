@@ -26,14 +26,17 @@ body {
   --slide-height: 19rem;
   --slide-spacing: 1rem;
   --slide-size: 100%;
+  background-color: black;
 }
 .embla__viewport {
   overflow: hidden;
+  background-color: black;
 }
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
+  background-color: black;
 }
 .embla__slide__number {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -61,4 +64,5 @@ body {
   align-items: center;
   align-content: center;
   display: block;
+  background-color: #0a0a0a;
 }
