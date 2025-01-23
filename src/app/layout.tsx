@@ -3,13 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const interFont = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Include the desired font weights
+  variable: "--font-inter",
 });
+
 export const metadata: Metadata = {
   title: "FOXPAY",
   description: "FOXPAY SOLUÇÕES FINANCEIRAS",
+  viewport: "width=device-width, initial-scale=1.0",
 };
 
 export default function RootLayout({
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${interFont.variable} antialiased`}>{children}</body>
+    <html lang="pt-br" className={interFont.variable}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
