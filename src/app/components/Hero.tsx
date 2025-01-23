@@ -9,18 +9,16 @@ export default function Hero() {
       {/* Text Content */}
       <div className="relative z-10 container mx-auto px-6 sm:px-12 flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl font-extralight text-orange-500 sm:text-5xl mb-6 leading-tight">
-          Como empresário, você trabalha duro para crescer sua empresa e atender
-          seus clientes.
+          Transforme seus negócios com a FOXPAY
         </h1>
         <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
-          Mas você sabia que poderia estar perdendo milhares de reais por ano em
-          impostos desnecessários sobre as taxas de processamento de seus
-          cartões de crédito?
+          A solução inteligente que divide seus pagamentos, elimina tributação
+          dupla e maximiza seus lucros legalmente.
         </p>
         <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto font-thin leading-tight">
-          Apresentamos FoxPay - a solução de processamento de cartões de crédito
-          que o ajuda a minimizar legalmente sua responsabilidade fiscal e
-          aumentar seus lucros.
+          Com split de pagamento, você economiza, cresce e conquista mais
+          resultados financeiros sem complicações fiscais. Liberdade financeira
+          começa aqui!
         </p>
 
         {/* Call to Action Button */}
@@ -28,7 +26,7 @@ export default function Hero() {
           variant="outlined"
           color="primary"
           component="a"
-          href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
+          href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FOXPAY%20e%20gostaria%20de%20saber%20mais."
           sx={{
             borderColor: "orange",
             color: "orange",
@@ -44,7 +42,7 @@ export default function Hero() {
             transition: "all 0.3s ease",
           }}
         >
-          Saiba Mais Sobre FoxPay
+          Saiba Mais Sobre FOXPAY
         </Button>
       </div>
     </section>
