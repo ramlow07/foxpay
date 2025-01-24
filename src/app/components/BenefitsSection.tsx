@@ -28,7 +28,7 @@ export default function BenefitsSection() {
               icon: <MdCallSplit className="w-6 h-6" />,
               title: "Split de pagamentos",
               description:
-                "Divida seus recebimentos com organização e segurança",
+                "Divida seus recebimentos com organização e segurança.",
             },
             {
               icon: <FaPeopleArrows className="w-6 h-6" />,
@@ -51,7 +51,7 @@ export default function BenefitsSection() {
               icon: <MdOutlineAccountBalance className="h-6 w-6" />,
               title: "Conta Digital",
               description:
-                "Acesso a conta digital para acompanhamento em tempo real de todas as suas vendas. AUTONOMIA TOTAL na palma da sua mão",
+                "Acesso a conta digital para acompanhamento em tempo real de todas as suas vendas. AUTONOMIA TOTAL na palma da sua mão.",
             },
 
             {
