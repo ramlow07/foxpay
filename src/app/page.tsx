@@ -3,6 +3,7 @@ import Introduction from "./components/Introduction";
 import Hero from "./components/Hero";
 import Menu from "./components/Menu";
 import BenefitsSection from "./components/BenefitsSection";
+import AnalysisForm from "./components/AnalysisForm";
 import Footer from "./components/Footer";
 import { EmblaOptionsType } from "embla-carousel";
 import FeedbackCarousel from "./components/FeedbackCarousel";
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <FeedbackCarousel slides={imageSlides} options={OPTIONS} />
       <BenefitsSection />
+      <AnalysisForm />
       <Footer />
     </main>
   );
