@@ -61,6 +61,8 @@ export default function AnalysisForm() {
     faturamento: "",
     pagarImpostoAlto: "",
   });
+  const [outroSegmento, setOutroSegmento] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleRadio = (name: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -70,9 +72,22 @@ export default function AnalysisForm() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          segmento: formData.segmento === "Outro" ? `Outro: ${outroSegmento}` : formData.segmento,
+        }),
+      });
+      setStatus(res.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClass =
@@ -133,6 +148,16 @@ export default function AnalysisForm() {
               value={formData.segmento}
               onChange={handleRadio}
             />
+            {formData.segmento === "Outro" && (
+              <input
+                type="text"
+                placeholder="Qual é o seu segmento?"
+                value={outroSegmento}
+                onChange={(e) => setOutroSegmento(e.target.value)}
+                className={inputClass}
+                required
+              />
+            )}
           </div>
 
           {/* Step 3 */}
@@ -179,12 +204,26 @@ export default function AnalysisForm() {
           </div>
 
           {/* Submit */}
-          <button
-            type="submit"
-            className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 rounded-lg text-lg transition-colors duration-300"
-          >
-            Quero minha análise
-          </button>
+          {status === "success" ? (
+            <div className="w-full bg-green-600/20 border border-green-500 text-green-400 font-semibold py-4 rounded-lg text-center text-lg">
+              Solicitação enviada! Entraremos em contato em breve.
+            </div>
+          ) : (
+            <>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg text-lg transition-colors duration-300"
+              >
+                {status === "loading" ? "Enviando..." : "Quero minha análise"}
+              </button>
+              {status === "error" && (
+                <p className="text-center text-red-400 text-sm">
+                  Ocorreu um erro ao enviar. Tente novamente.
+                </p>
+              )}
+            </>
+          )}
         </form>
       </div>
     </section>
