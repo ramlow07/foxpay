@@ -22,7 +22,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <a
-                  href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
+                  href="#analise"
                   className="text-zinc-400 text-sm hover:text-orange-500 transition-colors"
                 >
                   Nossos Serviços
@@ -30,7 +30,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
+                  href="#analise"
                   className="text-zinc-400 text-sm hover:text-orange-500 transition-colors"
                 >
                   Fale Conosco
@@ -38,7 +38,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
+                  href="#analise"
                   className="text-zinc-400 text-sm hover:text-orange-500 transition-colors"
                 >
                   Central de Ajuda

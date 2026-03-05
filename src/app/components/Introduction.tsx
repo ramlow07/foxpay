@@ -38,7 +38,7 @@ export default function Introduction() {
         </p>
 
         <a
-          href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FoxPay%20e%20gostaria%20de%20saber%20mais."
+          href="#analise"
           className="px-8 py-3 rounded-full border border-orange-500 text-orange-500 font-semibold text-base hover:bg-orange-500/10 hover:border-orange-400 transition-all duration-300"
         >
           Saiba mais
