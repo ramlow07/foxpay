@@ -1,49 +1,29 @@
-import Button from "@mui/material/Button";
-
 export default function Hero() {
   return (
-    <section className="relative bg-cover bg-center text-white py-24">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black "></div>
+    <section className="border-t border-zinc-900 bg-zinc-950 text-white py-24">
+      <div className="container mx-auto px-6 sm:px-12 max-w-4xl">
+        <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight">
+          Transforme seus negócios{" "}
+          <span className="text-orange-500">com a FOXPAY</span>
+        </h2>
 
-      {/* Text Content */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-12 flex flex-col justify-center items-center text-center">
-        <h1 className="text-4xl font-extralight text-orange-500 sm:text-5xl mb-6 leading-tight">
-          Transforme seus negócios com a FOXPAY
-        </h1>
-        <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl text-zinc-300 mb-4 max-w-2xl leading-relaxed">
           A solução inteligente que divide seus pagamentos, elimina tributação
           dupla e maximiza seus lucros legalmente.
         </p>
-        <p className="text-lg sm:text-xl mb-8 max-w-3xl mx-auto font-thin leading-tight">
+
+        <p className="text-base text-zinc-500 mb-10 max-w-2xl leading-relaxed">
           Com split de pagamento, você economiza, cresce e conquista mais
           resultados financeiros sem complicações fiscais. Liberdade financeira
-          começa aqui!
+          começa aqui.
         </p>
 
-        {/* Call to Action Button */}
-        <Button
-          variant="outlined"
-          color="primary"
-          component="a"
+        <a
           href="https://wa.me/5548996516969?text=Ol%C3%A1!%20Vim%20do%20site%20da%20FOXPAY%20e%20gostaria%20de%20saber%20mais."
-          sx={{
-            borderColor: "orange",
-            color: "orange",
-            px: 4,
-            py: 1.5,
-            borderRadius: "9999px", // Full rounded
-            fontWeight: "bold",
-            fontSize: "1rem",
-            "&:hover": {
-              borderColor: "darkorange",
-              backgroundColor: "rgba(255, 165, 0, 0.1)", // Slight orange background on hover
-            },
-            transition: "all 0.3s ease",
-          }}
+          className="inline-block px-8 py-3 rounded-full border border-orange-500 text-orange-500 font-semibold text-base hover:bg-orange-500/10 hover:border-orange-400 transition-all duration-300"
         >
-          Saiba Mais Sobre FOXPAY
-        </Button>
+          Saiba mais sobre a FOXPAY
+        </a>
       </div>
     </section>
   );
