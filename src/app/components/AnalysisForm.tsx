@@ -9,6 +9,7 @@ type FormData = {
   simplesNacional: string;
   faturamento: string;
   pagarImpostoAlto: string;
+  instagram: string;
 };
 
 function RadioGroup({
@@ -60,9 +61,12 @@ export default function AnalysisForm() {
     simplesNacional: "",
     faturamento: "",
     pagarImpostoAlto: "",
+    instagram: "",
   });
   const [outroSegmento, setOutroSegmento] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleRadio = (name: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -74,7 +78,12 @@ export default function AnalysisForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.segmento || !formData.simplesNacional || !formData.faturamento || !formData.pagarImpostoAlto) {
+    if (
+      !formData.segmento ||
+      !formData.simplesNacional ||
+      !formData.faturamento ||
+      !formData.pagarImpostoAlto
+    ) {
       alert("Por favor, responda todas as perguntas antes de enviar.");
       return;
     }
@@ -85,7 +94,10 @@ export default function AnalysisForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          segmento: formData.segmento === "Outro" ? `Outro: ${outroSegmento}` : formData.segmento,
+          segmento:
+            formData.segmento === "Outro"
+              ? `Outro: ${outroSegmento}`
+              : formData.segmento,
         }),
       });
       setStatus(res.ok ? "success" : "error");
@@ -102,7 +114,8 @@ export default function AnalysisForm() {
       <div className="container mx-auto px-6 lg:px-12 max-w-2xl">
         <div className="mb-10">
           <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-3">
-            Solicite uma análise estratégica para a sua empresa pagar menos imposto
+            Solicite uma análise estratégica para a sua empresa pagar menos
+            imposto
           </h2>
           <p className="text-zinc-500 text-sm">
             Nem todas as empresas são aprovadas.
@@ -110,125 +123,138 @@ export default function AnalysisForm() {
         </div>
 
         <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-8">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-          {/* Step 1 */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-orange-500 font-semibold text-lg">
-              1. Nome + WhatsApp
-            </h3>
-            <input
-              type="text"
-              name="nome"
-              placeholder="Nome completo"
-              value={formData.nome}
-              onChange={handleInput}
-              className={inputClass}
-              required
-            />
-            <input
-              type="tel"
-              name="whatsapp"
-              placeholder="WhatsApp com DDD"
-              value={formData.whatsapp}
-              onChange={handleInput}
-              className={inputClass}
-              required
-            />
-          </div>
-
-          {/* Step 2 */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-orange-500 font-semibold text-lg">
-              2. Qual é o seu segmento?
-            </h3>
-            <RadioGroup
-              name="segmento"
-              options={[
-                "Loja de iPhone / Produtos Apple",
-                "Loja de eletrônicos",
-                "Restaurante",
-                "Outro",
-              ]}
-              value={formData.segmento}
-              onChange={handleRadio}
-            />
-            {formData.segmento === "Outro" && (
+          <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+            {/* Step 1 */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                1. Nome + WhatsApp
+              </h3>
               <input
                 type="text"
-                placeholder="Qual é o seu segmento?"
-                value={outroSegmento}
-                onChange={(e) => setOutroSegmento(e.target.value)}
+                name="nome"
+                placeholder="Nome completo"
+                value={formData.nome}
+                onChange={handleInput}
                 className={inputClass}
                 required
               />
-            )}
-          </div>
-
-          {/* Step 3 */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-orange-500 font-semibold text-lg">
-              3. Sua empresa é optante do Simples Nacional?
-            </h3>
-            <RadioGroup
-              name="simplesNacional"
-              options={["Sim", "Não", "Não sei informar"]}
-              value={formData.simplesNacional}
-              onChange={handleRadio}
-            />
-          </div>
-
-          {/* Step 4 */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-orange-500 font-semibold text-lg">
-              4. Qual seu faturamento médio mensal?
-            </h3>
-            <RadioGroup
-              name="faturamento"
-              options={[
-                "Até R$ 50 mil",
-                "R$ 50 mil a R$ 150 mil",
-                "Acima de R$ 150 mil",
-              ]}
-              value={formData.faturamento}
-              onChange={handleRadio}
-            />
-          </div>
-
-          {/* Step 5 */}
-          <div className="flex flex-col gap-3">
-            <h3 className="text-orange-500 font-semibold text-lg">
-              5. Você sente que paga imposto alto sobre o que vende?
-            </h3>
-            <RadioGroup
-              name="pagarImpostoAlto"
-              options={["Sim", "Não", "Não sei"]}
-              value={formData.pagarImpostoAlto}
-              onChange={handleRadio}
-            />
-          </div>
-
-          {/* Submit */}
-          {status === "success" ? (
-            <div className="w-full bg-green-600/20 border border-green-500 text-green-400 font-semibold py-4 rounded-lg text-center text-lg">
-              Solicitação enviada! Entraremos em contato em breve.
+              <input
+                type="tel"
+                name="whatsapp"
+                placeholder="WhatsApp com DDD"
+                value={formData.whatsapp}
+                onChange={handleInput}
+                className={inputClass}
+                required
+              />
             </div>
-          ) : (
-            <>
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg text-lg transition-colors duration-300"
-              >
-                {status === "loading" ? "Enviando..." : "Quero minha análise"}
-              </button>
-              {status === "error" && (
-                <p className="text-center text-red-400 text-sm">
-                  Ocorreu um erro ao enviar. Tente novamente.
-                </p>
+
+            {/* Step 2 */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                2. Qual é o seu segmento?
+              </h3>
+              <RadioGroup
+                name="segmento"
+                options={[
+                  "Comércio de Eletrônicos",
+                  "Bares ou Restaurantes",
+                  "Outros",
+                ]}
+                value={formData.segmento}
+                onChange={handleRadio}
+              />
+              {formData.segmento === "Outro" && (
+                <input
+                  type="text"
+                  placeholder="Qual é o seu segmento?"
+                  value={outroSegmento}
+                  onChange={(e) => setOutroSegmento(e.target.value)}
+                  className={inputClass}
+                  required
+                />
               )}
-            </>
-          )}
-        </form>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                3. Sua empresa é optante do Simples Nacional?
+              </h3>
+              <RadioGroup
+                name="simplesNacional"
+                options={["Sim", "Não", "Não sei informar"]}
+                value={formData.simplesNacional}
+                onChange={handleRadio}
+              />
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                4. Qual seu faturamento médio mensal?
+              </h3>
+              <RadioGroup
+                name="faturamento"
+                options={[
+                  "Até R$ 50 mil",
+                  "R$ 50 mil a R$ 150 mil",
+                  "Acima de R$ 150 mil",
+                ]}
+                value={formData.faturamento}
+                onChange={handleRadio}
+              />
+            </div>
+
+            {/* Step 5 */}
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                5. Você sente que paga imposto alto sobre o que vende?
+              </h3>
+              <RadioGroup
+                name="pagarImpostoAlto"
+                options={["Sim", "Não", "Não sei"]}
+                value={formData.pagarImpostoAlto}
+                onChange={handleRadio}
+              />
+            </div>
+            <div className="flex flex-col gap-3">
+              <h3 className="text-orange-500 font-semibold text-lg">
+                6. Qual o Instagram da sua empresa?
+              </h3>
+              <input
+                type="text"
+                name="instagram"
+                placeholder="Instagram da empresa"
+                value={formData.instagram}
+                onChange={handleInput}
+                className={inputClass}
+                required
+              />
+            </div>
+
+            {/* Submit */}
+            {status === "success" ? (
+              <div className="w-full bg-green-600/20 border border-green-500 text-green-400 font-semibold py-4 rounded-lg text-center text-lg">
+                Solicitação enviada! Entraremos em contato em breve.
+              </div>
+            ) : (
+              <>
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold py-4 rounded-lg text-lg transition-colors duration-300"
+                >
+                  {status === "loading" ? "Enviando..." : "Quero minha análise"}
+                </button>
+                {status === "error" && (
+                  <p className="text-center text-red-400 text-sm">
+                    Ocorreu um erro ao enviar. Tente novamente.
+                  </p>
+                )}
+              </>
+            )}
+          </form>
         </div>
       </div>
     </section>
